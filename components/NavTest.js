@@ -11,8 +11,10 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
+import { spacing, Link } from "@mui/material/";
+import Dropdown from "./Dropdown";
 
-const pages = ["Products", "Pricing", "Blog"];
+const pages = ["Trouver mon entreprise", "Trouver mon école"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const ResponsiveAppBar = () => {
@@ -37,14 +39,10 @@ const ResponsiveAppBar = () => {
   return (
     <AppBar
       position="static"
-      style={{
-        background: "none",
-        color: "black",
-        fontWeight: "bold",
-        boxShadow: "none",
-      }}
+      sx={{ p: 3 }}
+      style={{ textTransform: "none", background: "none" }}
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" sx={{ mr: 5 }}>
         <Toolbar disableGutters>
           <Typography
             variant="h6"
@@ -52,7 +50,11 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
           >
-            <img src="/Logo.png" alt="linkpick" className="img" />
+            <img
+              src="/Logo.png"
+              alt="linkpick"
+              sx={{ width: 80, height: 80 }}
+            />
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -86,69 +88,88 @@ const ResponsiveAppBar = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography
-                    textAlign="center"
-                    style={{
-                      background: "none",
-                      color: "black",
-                      fontWeight: "bold",
-                      boxShadow: "none",
-                    }}
-                  >
-                    {page}
-                  </Typography>
+                  <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
+
           <Typography
             variant="h6"
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-            LOGO
+            <img src="/Logo.png" alt="linkpick" className="img" />
           </Typography>
+
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{
+                  my: 2,
+                  color: "black",
+                  display: "block",
+                  textTransform: "none",
+                }}
               >
                 {page}
               </Button>
             ))}
+            <Box sx={{ mt: 2 }}>
+              {" "}
+              <Dropdown />
+            </Box>
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+          <Box>
+            <Typography>
+              {" "}
+              <Link
+                href="#"
+                underline="none"
+                sx={{
+                  px: 1,
+                  pb: 0.5,
+                  color: "black",
+                  fontSize: 14,
+                }}
+              >
+                {"  Se connecter"}
+              </Link>
+            </Typography>
+          </Box>
+          <Box>
+            <Typography>
+              {" "}
+              <Button
+                variant="contained"
+                sx={{
+                  borderRadius: "20px",
+                  textTransform: "none",
+                  px: 5,
+                  pb: 0.5,
+                  color: "white",
+                  textDecoration: "none",
+                }}
+              >
+                <Link
+                  href="#"
+                  underline="none"
+                  sx={{
+                    borderRadius: "20px",
+                    px: 1,
+                    pb: 0.5,
+                    color: "white",
+                    textDecoration: "none",
+                  }}
+                >
+                  {"  Sinscrire"}
+                </Link>
+              </Button>
+            </Typography>
           </Box>
         </Toolbar>
       </Container>
@@ -156,3 +177,46 @@ const ResponsiveAppBar = () => {
   );
 };
 export default ResponsiveAppBar;
+<style jsx>{`
+  .img {
+    max-width: 30%;
+  }
+  .nav-display {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    -moz-box-shadow: 0 4px 4px #f8f8f8;
+    -webkit-box-shadow: 0 4px 4px #f8f8f8;
+    box-shadow: 0 4px 4px #f8f8f8;
+    padding: 2rem;
+  }
+  .nav-display a {
+    text-decoration: none;
+    color: black;
+  }
+  .logo-secondary-display {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+    align-items: center;
+  }
+  .logo-primary-display {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+    align-items: center;
+  }
+  .sign-up {
+    background-color: #0360f9;
+    padding: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border-radius: 50px;
+  }
+  .sign-up a {
+    color: white;
+  }
+`}</style>;

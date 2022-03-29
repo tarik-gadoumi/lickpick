@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import NavBar from "./NavBar";
+import NavTest from "./NavTest";
 import Footer from "./Footer";
 
 const BodyContainer = styled("div")({
@@ -11,25 +12,22 @@ const BodyContainer = styled("div")({
   justifyContent: "space-between",
 });
 
-
 const Layout = ({ children }) => {
   return (
     <BodyContainer>
-      <NavBar />
-      <Box sx={{ flexGrow: 1, minHeight: "60vh" }}>
-        {children}
-      </Box>
+      {/* <NavBar /> */}
+      <NavTest />
+      <Box sx={{ flexGrow: 1, minHeight: "60vh" }}>{children}</Box>
       <Footer />
 
       <style jsx global>{`
-      body{
-        margin: 0px;
-        padding: 0px;
-      }
+        body {
+          margin: 0px;
+          padding: 0px;
+        }
       `}</style>
     </BodyContainer>
   );
 };
 
 export default Layout;
-

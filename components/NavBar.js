@@ -1,8 +1,9 @@
 import React from "react";
 import { useState } from "react";
-
+import { Button, Typography } from "@mui/material/";
 import Dropdown from "./Dropdown";
 
+// import { FiMenu, FiX } from "react-icons/fi";
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
@@ -14,15 +15,27 @@ export default function NavBar() {
           <div className="nav-display">
             <div className="logo-primary-display">
               <img src="/Logo.png" alt="linkpick" className="img" />
+              <Typography>
+                <a href="/about">Trouver mon entreprise</a>{" "}
+              </Typography>
+              <Typography>
+                {" "}
+                <a href="/about">Trouver mon école</a>
+              </Typography>
 
-              <a href="/about">Trouver mon entreprise</a>
-              <a href="/about">Trouver mon école</a>
               <Dropdown />
             </div>
             <div className="logo-secondary-display">
-              <a href="/about">Se connecter</a>
+              <Typography>
+                {" "}
+                <a href="/about">Se connecter</a>{" "}
+              </Typography>
+
               <div className="sign-up">
-                <a href="/about">S'inscrire</a>
+                <Typography>
+                  {" "}
+                  <a href="/about">S'inscrire</a>{" "}
+                </Typography>
               </div>
             </div>
           </div>
@@ -77,7 +90,11 @@ export default function NavBar() {
       `}</style>
 
       <style jsx global>{`
-    
+        html,
+        body {
+          padding: 0;
+          margin: 0;
+        }
         @media screen and (min-width: 1000px) {
           .nav-icon {
             display: none;

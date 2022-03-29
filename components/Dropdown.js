@@ -74,7 +74,7 @@ export default function CustomizedMenus() {
         disableElevation
         onClick={handleClick}
         endIcon={<KeyboardArrowDownIcon />}
-        style={{ textTransform: "none", color: "black", fontWeight: "bold" }}
+        style={{ textTransform: "none", color: "black" }}
       >
         Espace organisme
       </Button>
