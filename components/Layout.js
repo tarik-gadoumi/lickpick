@@ -12,7 +12,7 @@ const BodyContainer = styled("div")({
 });
 
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
   return (
     <BodyContainer>
       {/* <Header /> */}
@@ -20,8 +20,16 @@ const Layout = ({children}) => {
         {children}
       </Box>
       {/* <Footer /> */}
+
+      <style jsx global>{`
+      body{
+        margin: 0px;
+        padding: 0px;
+      }
+      `}</style>
     </BodyContainer>
   );
 };
 
 export default Layout;
+
