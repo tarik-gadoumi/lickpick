@@ -5,7 +5,7 @@ import {Button, Card, CardActions, CardContent, CardMedia, Grid, Typography, Lin
 export default function Preinscription() {
   return (
     <Container  sx={{mb: 4}} >
-    <Typography variant='h3'>Préinscrivez vous sans plus tarder</Typography>
+    {/* <Typography variant='h3'>Préinscrivez vous sans plus tarder</Typography> */}
      <Stack direction={{xs:"column", md:"row"}} spacing={2}>
         <Card sx={{ maxHeight: '100%', display: 'flex', flexDirection: 'column' }} justifyContent="center" alignItems="center">
             <CardMedia sx={{ maxHeight: '100%'}} component="img" src="/ecole.png" alt="ecole"/>

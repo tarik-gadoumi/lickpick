@@ -6,6 +6,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import IndexCard from '../components/index/Card'
 import IndexCardHorizon from '../components/index/CardHorizon'
+import Preinscription from '../components/Preinscription'
+import Partenaires from '../components/Partenaires'
 
 export default function Home() {
   const [valueType, setValueType] = useState("alternance");
@@ -113,6 +115,10 @@ export default function Home() {
       </Stack>
       <Stack>
         <Typography align='center' variant='h5'>Construisez enfin votre carrière au rythme de votre parcours</Typography>
+        <Preinscription/>
+      </Stack>
+      <Stack>
+        <Partenaires/>
       </Stack>
       <Stack>
         <Newsletter/>
