@@ -1,7 +1,10 @@
 
 import Layout from '../components/Layout'
+import { ThemeProvider } from '@mui/material/styles';
+import theme from '../theme/theme'
+
 function MyApp({ Component, pageProps }) {
-    return ( <Layout><Component {...pageProps} /></Layout>)
+    return ( <ThemeProvider theme={theme}><Layout><Component {...pageProps} /></Layout></ThemeProvider>)
   }
 
   export default MyApp
