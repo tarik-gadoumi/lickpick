@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
-// import Header from "./Header";
-// import Footer from "./Footer";
+import NavBar from "./NavBar";
+import Footer from "./Footer";
 
 const BodyContainer = styled("div")({
   display: "flex",
@@ -15,11 +15,11 @@ const BodyContainer = styled("div")({
 const Layout = ({ children }) => {
   return (
     <BodyContainer>
-      {/* <Header /> */}
+      <NavBar />
       <Box sx={{ flexGrow: 1, minHeight: "60vh" }}>
         {children}
       </Box>
-      {/* <Footer /> */}
+      <Footer />
 
       <style jsx global>{`
       body{

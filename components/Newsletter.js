@@ -1,21 +1,29 @@
 import * as React from 'react';
-import {TextField, Box, Button, Typography, Container} from '@mui/material';
+import {TextField, Stack, Box, Button, Typography, Container} from '@mui/material';
 
 export default function Newsletter() {
   return (
-    <Box sx={{display: 'flex', flexDirection: 'column', background:'lightblue', p: 4}}  justifyContent="center" alignItems="center">
+    <Container>
+    <Stack spacing={2} sx={{background:'lightblue', borderRadius: '10px', p:3}}>
       <Typography align="center" variant='h4'>Prêt à vous lancer ?</Typography>
       <Typography align="center">Inscrivez-vous notre newsletters pour recevoir nos conseils et actualités</Typography>
          <Box component="form"  sx={{  display: 'flex', flexDirection: 'column'}}  justifyContent="center" alignItems="center" 
          noValidate
          autoComplete="off"
             >
-        <div>
-            <TextField required defaultValue="Votre Adresse mail" />
-        <Button variant="contained" sx={{borderRadius: "40px", width: "400px" }}>S'inscrire</Button>
-        </div>
-  
+        <Stack spacing={2}>
+            <TextField sx={styles.input} required placeholder="Votre Adresse mail" />
+        <Button variant="contained" sx={{borderRadius: "40px", width: "400px", p: 1, backgroundColor:'warning.main', boxShadow:0 }}>S'inscrire à la newsletter</Button>
+        </Stack>
         </Box>
-    </Box>
+    </Stack>
+    </Container>
   );
 }
+
+
+const styles = {
+  input: {
+    borderRadius: "10px",
+  }
+};
