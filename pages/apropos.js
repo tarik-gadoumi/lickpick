@@ -26,7 +26,7 @@ export default function Apropos() {
             <Typography>C’est donc en pensant aux besoins des étudiants que Linkpick est née, et c’est en y intégrant les besoins des écoles et des entreprises que la solution s’est développée, créant ainsi un environnement vertueux.</Typography>
             <Typography>Nous sommes convaincus que : </Typography>
             <Typography sx={{ fontWeight: 'bold' }} > La recherche d’école, de stage et d’alternance peut être grandement facilitée. Les entreprises, écoles et étudiants qui s’engagent dans ce processus peuvent y établir des liens durables de confiance, au bénéfice de tous.</Typography>
-            <Typography>Maintenant, avec Linkpick, nous simplifions et facilitons l'accès aux périodes professionnalisantes des étudiants (stage et alternance) avec <Link className='p_diff'>un seul objectif, fluidifier les échanges et les démarches entre les écoles, les étudiants et les entreprises.</Link> </Typography>
+            <Typography>Maintenant, avec Linkpick, nous simplifions et facilitons l'accès aux périodes professionnalisantes des étudiants (stage et alternance) avec <Link>un seul objectif, fluidifier les échanges et les démarches entre les écoles, les étudiants et les entreprises.</Link> </Typography>
             <Typography>Nous sommes soutenus dans cette démarche par des partenaires du monde tech ou universitaire et améliorons à présent à temps plein notre plateforme de mise en relation.</Typography>
             <Typography>Nous grandissons avec vous, alors n’hésitez pas à nous contacter pour nous donner votre avis ou nous faire des suggestions ! </Typography>
             <Typography>À bientôt sur la plateforme,</Typography> 
@@ -36,7 +36,7 @@ export default function Apropos() {
         <Container>
             <Stack direction="row" spacing={2} justifyContent="space-between" alignItems="center" >
                 <Card sx={{ height: '50%', display: 'flex', flexDirection: 'column', boxShadow: 0  }}  justifyContent="center" alignItems="center">
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+                <Avatar alt="Arnaud" src="arnaud.jpeg" sx={{ width: 80, height: 80 }}/>
                     <CardContent sx={{ flexGrow: 1 }}>
                         <Typography gutterBottom variant="h5" component="h5"> Arnaud Bichi </Typography>
                         <Typography> Co-fondateur - CTO </Typography>
@@ -49,20 +49,20 @@ export default function Apropos() {
                     </Card>
 
                     <Card sx={{ height: '50%', display: 'flex', flexDirection: 'column', boxShadow: 0  }}>
-                        <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+                    <Avatar alt="Quentin" src="quentin.jpeg" sx={{ width: 80, height: 80 }}/>
                         <CardContent sx={{ flexGrow: 1 }}>
                             <Typography gutterBottom variant="h5" component="h5"> Quentin Bichi </Typography>
                             <Typography> Co-fondateur - CEO </Typography>
                         </CardContent>
                         <CardActions>
-                            <IconButton  aria-label="Linkedin">
+                            <IconButton  aria-label="Linkedin" color="primary" >
                                 <LinkedInIcon/>
                             </IconButton>
                         </CardActions>
                 </Card>
 
                 <Card sx={{ height: '50%', display: 'flex', flexDirection: 'column', boxShadow: 0  }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+                <Avatar alt="Leslie" src="leslie.jpeg" sx={{ width: 80, height: 80 }}/>
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h5"> Leslie Hue </Typography>
                     <Typography> CPO </Typography>
