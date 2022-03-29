@@ -1,10 +1,12 @@
 import { Button, Box, Stack, Container, TextField, Typography, Select, FormControl, MenuItem, InputLabel } from '@mui/material/';
 import TextSnippetIcon from '@mui/icons-material/TextSnippet';
+import Newsletter from '../components/Newsletter';
 
 export default function Home() {
 
 
   return (
+<Container>
     <Box sx={styles.boxSearchContainer}>
       {/* <img style={styles.imageHome} src={'/home.svg'} /> */}
       <Container sx={styles.boxSearch}>
@@ -52,6 +54,12 @@ export default function Home() {
       <Container>
       </Container>
     </Box>
+
+    <Container >
+      <Newsletter/>
+    </Container>
+
+    </Container>
   )
 }
 
@@ -60,7 +68,7 @@ export default function Home() {
   
 const styles = {
   boxSearchContainer: {
-    height: '100vh',
+  
     background : 'primary.main',
   },
   searchForm : {

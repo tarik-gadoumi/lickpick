@@ -1,17 +1,17 @@
 import Head from 'next/head'
 import * as React from 'react';
-import {Button, Card, CardActions, CardContent, CardMedia, Grid, Typography, Link, Container, CardActionArea, Stack, Avatar, IconButton, Box}from '@mui/material';
+import {Button, Card, CardActions, CardContent, CardMedia, Grid, Typography, Link, Container, CardActionArea, Stack, Avatar, IconButton, Box}from '@mui/material/';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 export default function Apropos() {
   return (
-    <div className="container">
+    <div>
       <Head>
         <title>A propos</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+
 
         <Container>
             <Typography variant='h1'>LINKPICK</Typography>
@@ -55,7 +55,7 @@ export default function Apropos() {
                             <Typography> Co-fondateur - CEO </Typography>
                         </CardContent>
                         <CardActions>
-                            <IconButton  aria-label="Linkedin" color="primary" >
+                            <IconButton  aria-label="Linkedin" color="primar" >
                                 <LinkedInIcon/>
                             </IconButton>
                         </CardActions>
@@ -184,7 +184,7 @@ export default function Apropos() {
         </Stack>
       </Container>
  
-      </main>
+
 
     </div>
   )
