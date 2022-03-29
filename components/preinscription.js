@@ -24,7 +24,7 @@ export default function Preinscription() {
 
    
             <Card sx={{ maxHeight: '100%', display: 'flex', flexDirection: 'column' }} justifyContent="center" alignItems="center">
-              <CardMedia  sx={{ maxHeight: '100%'}} component="img" src="/etudiant.png" alt="etudiant"/>
+              <CardMedia  sx={{ maxHeight: '100%', mb: 5}} component="img" src="/etudiant.png" alt="etudiant"/>
               <CardContent sx={{ flexGrow: 1 }}>
                 <Typography align="center" gutterBottom variant="h5" component="h5">
                 Je suis un(e) étudiant(e)                    
@@ -39,7 +39,7 @@ export default function Preinscription() {
             </Card>
 
             <Card sx={{ maxHeight: '100%', display: 'flex', flexDirection: 'column' }} justifyContent="center" alignItems="center" >
-               <CardMedia  sx={{ maxHeight: '100%'}} component="img" src="/recruteur.png" alt="recruteur"/>
+               <CardMedia  sx={{ maxHeight: '100%', mb: 2}} component="img" src="/recruteur.png" alt="recruteur"/>
               <CardContent sx={{ flexGrow: 1 }}>
                 <Typography align="center" gutterBottom variant="h5" component="h5">
                 Je suis une entreprise                
