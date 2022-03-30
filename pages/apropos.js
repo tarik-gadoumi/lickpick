@@ -155,14 +155,14 @@ const styles = {
   },
 
   aproposboite: {
-    backgroundColor:'black',
-    height: '60%',
+    backgroundColor:'rgba(0, 0, 0, 0.6)',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
     paddingTop: 4,
     paddingBottom: 4,
+    flex: 1,
   },
 
 };
