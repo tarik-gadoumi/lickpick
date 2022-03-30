@@ -121,7 +121,7 @@ export default function Home() {
         <Container sx={{overflow: "hidden", p: 3}}>
           <Stack  spacing={5} direction={{ xs: 'column', md: 'row' }}>
             <Box className='box1' sx={{transform: 'translateX(-500px)'}}>
-            <IndexCard className='box1' icon='explore' title='Choisissez votre voie' description='Explorez les trajectoires de formation
+            <IndexCard icon='explore' title='Choisissez votre voie' description='Explorez les trajectoires de formation
             et candidatez en quelques clics dans 
             les écoles qui vous correspondent.' />
             </Box>
