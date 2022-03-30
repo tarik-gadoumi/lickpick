@@ -60,20 +60,6 @@ export default function Home() {
     });
     gsap.to('.dashboard', {
       scrollTrigger: '.boxContainer3',
-
-<<<<<<< HEAD
-    y: '0'
-  });
-  gsap.to(".preinscription", {
-    scrollTrigger: ".boxContainer4", 
-    y: '0'
-  });
-  gsap.to(".partenaires", {
-    scrollTrigger: ".partenaires", 
-    y: '0'
-  });
-}, []);
-=======
       y: '0',
     });
     gsap.to('.preinscription', {
@@ -81,11 +67,10 @@ export default function Home() {
       y: '0',
     });
     gsap.to('.partenaires', {
-      scrollTrigger: '.boxContainer5',
+      scrollTrigger: '.partenaires',
       y: '0',
     });
   }, []);
->>>>>>> 84a7411 (adding company solution)
 
   return (
     <>
@@ -159,12 +144,6 @@ export default function Home() {
           </Stack>
         </Container>
 
-<<<<<<< HEAD
-        <Container sx={{overflow: "hidden", p: 3}}>
-          <Stack  spacing={5} direction={{ xs: 'column', md: 'row' }}>
-            <Box className='box1' sx={{transform: 'translateX(-500px)'}}>
-            <IndexCard icon='explore' title='Choisissez votre voie' description='Explorez les trajectoires de formation
-=======
         <Container sx={{ overflow: 'hidden', p: 3 }}>
           <Stack spacing={5} direction={{ xs: 'column', md: 'row' }}>
             <Box className="box1" sx={{ transform: 'translateX(-500px)' }}>
@@ -173,7 +152,6 @@ export default function Home() {
                 icon="explore"
                 title="Choisissez votre voie"
                 description="Explorez les trajectoires de formation
->>>>>>> 84a7411 (adding company solution)
             et candidatez en quelques clics dans 
             les écoles qui vous correspondent."
               />
@@ -273,11 +251,6 @@ export default function Home() {
           </Box>
         </Container>
       </Stack>
-<<<<<<< HEAD
-      <Stack  className='boxContainer4' sx={{overflow: "hidden"}} spacing={3}>
-        <Typography align='center' variant='h5'>Construisez enfin votre carrière au rythme de votre parcours</Typography>
-        <Box className="preinscription" sx={{transform: 'translateY(+500px)'}}><Preinscription/></Box>
-=======
       <Stack className="boxContainer4" sx={{ overflow: 'hidden' }}>
         <Typography align="center" variant="h5">
           Construisez enfin votre carrière au rythme de votre parcours
@@ -288,7 +261,6 @@ export default function Home() {
         >
           <Preinscription />
         </Box>
->>>>>>> 84a7411 (adding company solution)
       </Stack>
       <Stack className="boxContainer5" sx={{ overflow: 'hidden' }}>
         <Box className="partenaires" sx={{ transform: 'translateY(+500px)' }}>
