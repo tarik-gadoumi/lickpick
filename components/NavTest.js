@@ -50,11 +50,14 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
           >
-            <img
-              src="/Logo.png"
-              alt="linkpick"
-              sx={{ width: 80, height: 80 }}
-            />
+            <a href="/">
+              {" "}
+              <img
+                src="/Logo.png"
+                alt="linkpick"
+                sx={{ width: 80, height: 80 }}
+              />{" "}
+            </a>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>

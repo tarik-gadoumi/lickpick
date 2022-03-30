@@ -195,7 +195,7 @@ export default function Foote() {
                           color: "primary.dark",
                         }}
                       >
-                        <a href="">Contactez-nous</a>
+                        <a href="/contact">Contactez-nous</a>
                       </Typography>
                     </div>
                   </div>
@@ -234,7 +234,7 @@ export default function Foote() {
                           color: "primary.dark",
                         }}
                       >
-                        <a href="">Notre histoire</a>
+                        <a href="/apropos">Notre histoire</a>
                       </Typography>
                     </div>
                     <br></br>
@@ -318,7 +318,10 @@ export default function Foote() {
                     }}
                   >
                     {" "}
-                    <div>RGPD</div>
+                    <div>
+                      {" "}
+                      <a href="/rgpd">RGPD </a>
+                    </div>
                   </Typography>
 
                   <br></br>
