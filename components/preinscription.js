@@ -17,7 +17,7 @@ export default function Preinscription() {
                 </Typography>
               </CardContent>
               <CardActions sx={{display: 'flex', justifyContent: 'center'}}>
-                <Button variant="contained" size="small" sx={{backgroundColor:"warning.dark", borderRadius: "400px", p: 1.5, width:'60%'}} >Découvrir la solution</Button>
+                  <Button href='/solution-ecole' variant="contained" size="small" sx={{backgroundColor:"warning.dark", borderRadius: "400px", p: 1.5, width:'60%'}} >Découvrir la solution</Button>
               </CardActions>
             </Card>
 
@@ -33,7 +33,7 @@ export default function Preinscription() {
                 </Typography>
               </CardContent>
               <CardActions sx={{display: 'flex', justifyContent: 'center'}} >
-                <Button variant="contained" size="small" sx={{borderRadius: "400px", p: 1.5, width:'70%'}}>S'inscrire</Button>
+                   <Button variant="contained" size="small" sx={{borderRadius: "400px", p: 1.5, width:'70%'}}>S'inscrire</Button>
               </CardActions>
             </Card>
 
@@ -48,7 +48,7 @@ export default function Preinscription() {
                 </Typography>
               </CardContent>
               <CardActions sx={{display: 'flex', justifyContent: 'center'}} >
-                <Button color="secondary" variant="contained" size="small" sx={{borderRadius: "400px", p: 1.5, width:'60%'}}>Découvrir la solution</Button>
+                  <Button href='/solution-entreprise' color="secondary" variant="contained" size="small" sx={{borderRadius: "400px", p: 1.5, width:'60%'}}>Découvrir la solution</Button>
               </CardActions>
             </Card>
     </Stack>

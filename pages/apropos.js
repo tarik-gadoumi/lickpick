@@ -8,7 +8,7 @@ export default function Apropos() {
   return (
     <Box>
         <Box sx={styles.apropos} >
-            <Typography color='#ffffff' align='center' variant='h1'>LINKPICK</Typography>
+            <Typography  color='#ffffff' align='center' variant='h1'>LINKPICK</Typography>
             <Typography color='#ffffff' align='center' variant='h2'>LA SOLUTION QUI FACILITE LA RELATION ENTRE ÉTUDIANTS, ENTREPRISES ET ÉCOLES</Typography>
         </Box>
       
@@ -23,7 +23,7 @@ export default function Apropos() {
             <Typography color='#5971b0' align='center'>C’est donc en pensant aux besoins des étudiants que Linkpick est née, et c’est en y intégrant les besoins des écoles et des entreprises que la solution s’est développée, créant ainsi un environnement vertueux.</Typography>
             <Typography color='#5971b0' align='center'>Nous sommes convaincus que : </Typography>
             <Typography color='#5971b0' align='center' sx={{ fontWeight: 'bold' }} > La recherche d’école, de stage et d’alternance peut être grandement facilitée. Les entreprises, écoles et étudiants qui s’engagent dans ce processus peuvent y établir des liens durables de confiance, au bénéfice de tous.</Typography>
-            <Typography color='#5971b0' align='center'>Maintenant, avec Linkpick, nous simplifions et facilitons l'accès aux périodes professionnalisantes des étudiants (stage et alternance) avec <Link sx={{color: 'primary.main'}} underline="none">un seul objectif, fluidifier les échanges et les démarches entre les écoles, les étudiants et les entreprises.</Link> </Typography>
+            <Typography color='#5971b0' align='center'>Maintenant, avec Linkpick, nous simplifions et facilitons l'accès aux périodes professionnalisantes des étudiants (stage et alternance) avec <Link sx={{color: 'primary.main', fontWeight: 'bold'}} underline="none">un seul objectif, fluidifier les échanges et les démarches entre les écoles, les étudiants et les entreprises.</Link> </Typography>
             <Typography color='#5971b0' align='center'>Nous sommes soutenus dans cette démarche par des partenaires du monde tech ou universitaire et améliorons à présent à temps plein notre plateforme de mise en relation.</Typography>
             <Typography color='#5971b0' align='center'>Nous grandissons avec vous, alors n’hésitez pas à nous contacter pour nous donner votre avis ou nous faire des suggestions ! </Typography>
             <Typography color='#5971b0' align='center'>À bientôt sur la plateforme,</Typography> 
@@ -41,9 +41,12 @@ export default function Apropos() {
                         <Typography color='#5971b0' align="center" fontWeight= 'bold'> Co-fondateur - CTO </Typography>
                     </CardContent>
                     <CardActions sx={{display: 'flex', justifyContent: 'center', color: 'primary'}}>
+                      <Link href='https://www.linkedin.com/in/arnaud-bichi/'>
                         <IconButton  aria-label="Linkedin" >
                             <LinkedInIcon  color="primary" fontSize="large" />
                         </IconButton>
+                      </Link>
+                      
                     </CardActions>
                     </Card>
 
@@ -57,9 +60,11 @@ export default function Apropos() {
                     <Typography align="center" color='#5971b0' fontWeight= 'bold' > Co-fondateur - CEO </Typography>
                   </CardContent>
                   <CardActions sx={{display: 'flex', justifyContent: 'center'}}>
+                    <Link href="https://www.linkedin.com/in/quentin-bichi-79341b128/">
                     <IconButton  aria-label="Linkedin">
                         <LinkedInIcon fontSize="large"  color="primary"/>
                      </IconButton>
+                     </Link>
                   </CardActions>
                 </Card>
 
@@ -72,9 +77,12 @@ export default function Apropos() {
                     <Typography align="center" color='#5971b0' fontWeight= 'bold'> CPO </Typography>
                   </CardContent>
                   <CardActions sx={{display: 'flex', justifyContent: 'center'}}>
-                    <IconButton  aria-label="Linkedin"  sx={{ display: 'flex', justifyContent: 'center'}}>
+                    <Link href='https://www.linkedin.com/in/leslie-hue/'>
+                       <IconButton  aria-label="Linkedin"  sx={{ display: 'flex', justifyContent: 'center'}}>
                         <LinkedInIcon fontSize="large"  color="primary"/>
                      </IconButton>
+                    </Link>
+                 
                   </CardActions>
                 </Card>
             </Stack>
@@ -88,7 +96,7 @@ export default function Apropos() {
                 <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent:"space-between", minWidth: '50%' }}>
                     <Typography component="div" variant="h3" sx={{mb: 4}}> Linkpick au forum Medinjob par Madeinmarseille :</Typography>
                     <Typography variant="h5" color='#5971b0' sx={{mb: 4}}> "Pour les deux frères, mettre l’étudiant ou la personne en reconversion au cœur de la démarche est essentiel, [...]" </Typography>
-                    <Link variant="h5" underline="none">Lire l'article</Link>
+                    <Link variant="h5" underline="none" href='https://madeinmarseille.net/100704-les-metiers-du-numerique-a-portee-de-main-grace-au-forum-medinjob/'>Lire l'article</Link>
                 </Box>
                 <Box  sx={{ minWidth: '50%'}}>
                     <CardMedia component="img"  image="/photo-apropos.png" alt="Photo à propos"  />
@@ -105,7 +113,7 @@ export default function Apropos() {
                 <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent:"space-between", minWidth: '50%'}}>
                   <Typography component="div" variant="h3" sx={{mb: 4}}> Nos offres d'emploi déjà disponibles</Typography>
                   <Typography variant="h5" color='#5971b0' sx={{mb: 4}}> Retrouvez toutes nos offres de stage et d'alternance proposées par nos entreprises partenaires sur notre réseau LinkedIn. </Typography>
-                  <Link variant="h5" underline="none">Lire l'article</Link>
+                  <Link variant="h5" underline="none" href='https://www.linkedin.com/company/linkpick/posts/'>Lire l'article</Link>
                 </Box>
             </Stack>
     </Container>
@@ -132,9 +140,10 @@ export default function Apropos() {
 
 const styles = {
   apropos: {
-      backgroundImage: "url(/longchamp.jpeg)",
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
+    backgroundImage: "url(/newsletter.png)",
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundColor: 'primary.main',
   },
 
 };
