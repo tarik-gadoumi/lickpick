@@ -8,7 +8,7 @@ export default function Apropos() {
   return (
     <Box>
         <Box sx={styles.apropos} >
-            <Typography sx={{mb: 4}} color='#ffffff' align='center' variant='h1'>LINKPICK</Typography>
+            <Typography sx={{mb: 6}} color='#ffffff' align='center' variant='h1'>LINKPICK</Typography>
             <Typography color='#ffffff' align='center' variant='h4'>LA SOLUTION QUI FACILITE LA RELATION ENTRE ÉTUDIANTS, ENTREPRISES ET ÉCOLES</Typography>
         </Box>
       
@@ -110,7 +110,7 @@ export default function Apropos() {
                   <CardMedia component="img"  image="/photo-apropos-2.png" alt="Photo à propos"/>
                 </Box>
                 
-                <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent:"space-between", minWidth: '50%'}}>
+                <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent:"space-evenly", minWidth: '50%'}}>
                   <Typography component="div" variant="h3" sx={{mb: 4}}> Nos offres d'emploi déjà disponibles</Typography>
                   <Typography variant="h5" color='#5971b0' sx={{mb: 4}}> Retrouvez toutes nos offres de stage et d'alternance proposées par nos entreprises partenaires sur notre réseau LinkedIn. </Typography>
                   <Link variant="h5" underline="none" href='https://www.linkedin.com/company/linkpick/posts/'>Lire l'article</Link>
@@ -140,12 +140,13 @@ export default function Apropos() {
 
 const styles = {
   apropos: {
-    backgroundImage: "url(/newsletter.png)",
+    backgroundImage: "url(/fontaine.png)",
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     backgroundColor: 'primary.main',
     paddingTop: 12,
-    paddingBottom: 12,
+    paddingBottom: 18,
+   
   },
 
 };
