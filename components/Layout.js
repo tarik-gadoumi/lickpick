@@ -11,8 +11,9 @@ if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-const BodyContainer = styled('div')({
-  display: 'flex',
+
+const BodyContainer = styled("div")({
+  display: "flex",
   flex: 1,
   minHeight: '100vh',
   flexDirection: 'column',
@@ -25,13 +26,7 @@ const Layout = ({ children }) => {
       {/* <Foote /> */}
       {/* <NavBar /> */}
       <NavTest />
-<<<<<<< HEAD
-  
       <Box sx={{ flexGrow: 1, minHeight: "60vh" }}>{children}</Box>
-=======
-
-      <Box sx={{ flexGrow: 1, minHeight: '60vh' }}>{children}</Box>
->>>>>>> 84a7411 (adding company solution)
       <br></br>
       <br></br>
 
