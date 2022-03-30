@@ -1,33 +1,21 @@
 import { StayPrimaryLandscape } from "@mui/icons-material";
-import { Typography, Container, Stack, SvgIcon } from "@mui/material";
+import { Typography, Container, Box, Pagination } from "@mui/material";
 import Link from "next/link";
 
 export default function rgpd() {
 	return (
 		<>
-			<Stack
-				direction={"row"}
-				justifyContent={"center"}
-				alignItems={"center"}
-				sx={{ backgroundColor: "primary.light" }}
-			>
-				<img
-					height={200}
-					src="./icons/RGPD.svg"
-					alt=""
-					style={{ marginLeft: 200 }}
-				/>
-				<Container maxWidth="lg" sx={{ marginLeft: 5, padding: 5 }}>
+			<Box sx={{ backgroundColor: "primary.light" }}>
+				<Container maxWidth="lg" sx={{ marginLeft: 50, padding: 5 }}>
 					<Typography
-						variant={{md: 'h3'}}
+						variant="h3"
 						sx={{
 							fontFamily: "Montserrat",
 							fontWeight: 800,
 							color: "primary.dark",
 						}}
 					>
-						POLITIQUE DE CONFIDENTIALITÉ ET DE PROTECTION DES
-						DONNÉES PERSONNELLES
+						Mentions légales
 					</Typography>
 					<Typography
 						variant="h6"
@@ -61,10 +49,10 @@ export default function rgpd() {
 						]}
 					</Typography>
 				</Container>
-			</Stack>
+			</Box>
 			<Container
 				maxWidth="md"
-				sx={{ padding: 5 }}
+				sx={{ marginLeft: 50, padding: 5, width: 800 }}
 			>
 				<Typography
 					variant="body1"
