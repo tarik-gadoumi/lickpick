@@ -5,10 +5,10 @@ import Link from "next/link";
 export default function rgpd() {
 	return (
 		<>
-			<Box sx={{ backgroundColor: "primary.light" }}>
-				<Container maxWidth="lg" sx={{ marginLeft: 50, padding: 5 }}>
+			<Box sx={{ backgroundColor: "primary.light", p: 5 }}>
+				<Container maxWidth="md">
 					<Typography
-						variant="h3"
+						variant={{md: 'h3'}}
 						sx={{
 							fontFamily: "Montserrat",
 							fontWeight: 800,
@@ -53,7 +53,7 @@ export default function rgpd() {
 			</Box>
 			<Container
 				maxWidth="md"
-				sx={{ marginLeft: 50, padding: 5, width: 800 }}
+				sx={{ padding: 5 }}
 			>
 				<Typography
 					variant="body1"
