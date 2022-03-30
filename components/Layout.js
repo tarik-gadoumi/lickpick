@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
     <BodyContainer>
       {/* <Foote /> */}
       {/* <NavBar /> */}
-      {/* <NavTest /> */}
+      <NavTest />
   
       <Box sx={{ flexGrow: 1, minHeight: "60vh" }}>{children}</Box>
       <br></br>
