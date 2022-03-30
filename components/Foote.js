@@ -448,7 +448,7 @@ export default function Foote() {
                   margin-right: 1rem;
                 }
                 .title-element-left-history a {
-                  margin-left: -2rem;
+                  margin-left: -2.5rem;
                 }
                 .title-element {
                   font-size: 1rem;
