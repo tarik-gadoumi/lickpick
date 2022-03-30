@@ -13,7 +13,7 @@ export default function Apropos() {
         </Box>
       
     
-          <Container  sx={{mb: 8}} >
+          <Container  sx={{mb: 16}} >
             <Box sx={{mb: 4}}>
               <Typography align='center' variant='h3'>Linkpick, c'est aussi une histoire…</Typography>
             </Box>
@@ -30,7 +30,7 @@ export default function Apropos() {
             <Typography color='#5971b0' align='center'>Toute l’équipe de Linkpick !</Typography>
           </Container>
         
-        <Container  sx={{mb: 8}} >
+        <Container  sx={{mb: 16}} >
             <Stack direction="row" spacing={2} justifyContent="space-between" alignItems="center" >
                 <Card sx={{ height: '50%', display: 'flex', flexDirection: 'column', boxShadow: 0,  justifyContent: 'center' }}>
                   <Box sx={{display: 'flex', justifyContent: 'center'}}>
@@ -83,7 +83,7 @@ export default function Apropos() {
 
 
 
-    <Container  sx={{mb: 8}} >
+    <Container  sx={{mb: 16}} >
         <Stack  spacing={2} direction={{xs:"column", md:"row"}}>
                 <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent:"space-between", minWidth: '50%' }}>
                     <Typography component="div" variant="h3" sx={{mb: 4}}> Linkpick au forum Medinjob par Madeinmarseille :</Typography>
@@ -96,7 +96,7 @@ export default function Apropos() {
             </Stack>
     </Container>
 
-    <Container  sx={{xs:"column", md:"row", mb: 8}} > 
+    <Container  sx={{xs:"column", md:"row", mb: 16}} > 
         <Stack direction={{xs:"column", md:"row"}} spacing={2}>
                 <Box sx={{ minWidth: '50%'}}>
                   <CardMedia component="img"  image="/photo-apropos-2.png" alt="Photo à propos"/>
@@ -110,7 +110,7 @@ export default function Apropos() {
             </Stack>
     </Container>
     
-    <Box xs={{mb: 8}}>
+    <Box xs={{mb: 12, mt: 8}}>
         <Stack xs={{mb: 8}}>
          <Typography align='center' variant='h5'>Nos partenaires institutionnels</Typography>
         </Stack>
@@ -125,22 +125,8 @@ export default function Apropos() {
       </Stack>
     <Preinscription/>
     </Box>
- 
-    
-
-        
-        
- 
-
 
     </Box>
   )
 }
 
-
-const styles = {
-  Typography: {
-    color: 'primary',
-  },
- 
-};
