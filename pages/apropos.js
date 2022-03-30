@@ -124,7 +124,7 @@ export default function Apropos() {
     
     <Box xs={{mb: 12, mt: 8}}>
         <Stack xs={{mb: 8}}>
-         <Typography align='center' variant='h5'>Nos partenaires institutionnels</Typography>
+        
         </Stack>
         <Partenaires/>
 
