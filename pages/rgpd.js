@@ -1,12 +1,23 @@
 import { StayPrimaryLandscape } from "@mui/icons-material";
-import { Typography, Container, Box, Pagination } from "@mui/material";
+import { Typography, Container, Stack, SvgIcon } from "@mui/material";
 import Link from "next/link";
 
 export default function rgpd() {
 	return (
 		<>
-			<Box sx={{ backgroundColor: "primary.light", p: 5 }}>
-				<Container maxWidth="md">
+			<Stack
+				direction={"row"}
+				justifyContent={"center"}
+				alignItems={"center"}
+				sx={{ backgroundColor: "primary.light" }}
+			>
+				<img
+					height={200}
+					src="./icons/RGPD.svg"
+					alt=""
+					style={{ marginLeft: 200 }}
+				/>
+				<Container maxWidth="lg" sx={{ marginLeft: 5, padding: 5 }}>
 					<Typography
 						variant={{md: 'h3'}}
 						sx={{
@@ -50,7 +61,7 @@ export default function rgpd() {
 						]}
 					</Typography>
 				</Container>
-			</Box>
+			</Stack>
 			<Container
 				maxWidth="md"
 				sx={{ padding: 5 }}
@@ -382,7 +393,7 @@ export default function rgpd() {
 					concernant, en effectuant sa demande écrite et signée,
 					accompagnée d’une preuve d’identité.
 				</Typography>
-                <Typography
+				<Typography
 					variant="body1"
 					sx={{
 						fontFamily: "Roboto",

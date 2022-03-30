@@ -1,12 +1,23 @@
 import { StayPrimaryLandscape } from "@mui/icons-material";
-import { Typography, Container, Box, Pagination } from "@mui/material";
+import { Typography, Container, Stack } from "@mui/material";
 import Link from "next/link";
 
 export default function rgpd() {
 	return (
 		<>
-			<Box sx={{ backgroundColor: "primary.light" }}>
-				<Container maxWidth="lg" sx={{ marginLeft: 50, padding: 5 }}>
+			<Stack
+				direction={"row"}
+				justifyContent={"center"}
+				alignItems={"center"}
+				sx={{ backgroundColor: "primary.light" }}
+			>
+				<img
+					height={150}
+					src="./icons/cookies.svg"
+					alt=""
+					style={{ marginLeft: 140 }}
+				/>
+				<Container maxWidth="lg" sx={{ padding: 5 }}>
 					<Typography
 						variant="h3"
 						sx={{
@@ -49,7 +60,7 @@ export default function rgpd() {
 						]}
 					</Typography>
 				</Container>
-			</Box>
+			</Stack>
 			<Container
 				maxWidth="md"
 				sx={{ marginLeft: 50, padding: 5, width: 800 }}
