@@ -1,5 +1,5 @@
 import 'animate.css';
-import { Stack, Button } from '@mui/material';
+import { Stack, Button, Typography } from '@mui/material';
 import DoneIcon from '@mui/icons-material/Done';
 import * as React from 'react';
 import AnimatedPage from './ animatedPage';
@@ -17,25 +17,24 @@ export default function Text() {
       <Stack sx={{ gridColumn: '1/2' }}>
         <Stack
           sx={{
-            fontSize: '400%',
+           
             color: '#0567F5',
           }}
         >
-          Recruter et accompagner
+          <Typography variant='h2'>Recruter et accompagner</Typography>
         </Stack>
-        <Stack sx={{ fontSize: '400%' }}>facilement vos futurs talents</Stack>
-        <Stack sx={{ fontSize: '200%' }}>Equipez-vous de Linkpick et</Stack>
+        <Stack sx={{ fontSize: '400%' }}><Typography variant='h2'>facilement vos futurs talents</Typography></Stack>
+        <Stack sx={{ fontSize: '200%' }}> <Typography variant='h4'>Equipez-vous de Linkpick et</Typography></Stack>
 
         <Stack
           className="animate__animated animate__flipInX animate__delay-1s"
           sx={{
-            animationDuration: '2s',
-            animationIterationCount: 'infinite',
-            color: '#01F527',
-            fontSize: '200%',
+          //   animationDuration: '25s',
+          //   animationIterationCount: 'infinite',
+            // ,
           }}
         >
-          gérer vos document facilement
+         <Typography color= 'secondary' variant='h4'> gérer vos documents facilement</Typography>
         </Stack>
         <Stack direction="column" display="grid" sx={{ marginBottom: '2rem' }}>
           <Button

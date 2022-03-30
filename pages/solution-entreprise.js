@@ -19,9 +19,11 @@ export default function Page() {
 
   console.log(offset);
   return (
-    <>
+    <Stack sx={{
+      overflow: "hidden"}}>
       <Stack
         sx={{
+          overflow: "hidden",
           margin: '0 auto',
           padding: '10em 2em',
           maxWidth: '100%',
@@ -47,11 +49,11 @@ export default function Page() {
         sx={{
           width: '100%',
           zIndex: '-1',
-          borderTop: '1px solid black',
+          // borderTop: '1px solid black',
         }}
       >
         <SecondeParag offset={offset} />
       </Stack>
-    </>
+    </Stack>
   );
 }
