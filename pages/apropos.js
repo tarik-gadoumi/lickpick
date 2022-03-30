@@ -7,13 +7,13 @@ import Partenaires from '../components/Partenaires';
 export default function Apropos() {
   return (
     <Box>
-        <Box sx={{mb: 4, backgroundColor:'primary.dark'}} >
+        <Box sx={styles.apropos} >
             <Typography color='#ffffff' align='center' variant='h1'>LINKPICK</Typography>
             <Typography color='#ffffff' align='center' variant='h2'>LA SOLUTION QUI FACILITE LA RELATION ENTRE ÉTUDIANTS, ENTREPRISES ET ÉCOLES</Typography>
         </Box>
       
     
-          <Container  sx={{mb: 16}} >
+          <Container  sx={{mb: 16, mt: 8}} >
             <Box sx={{mb: 4}}>
               <Typography align='center' variant='h3'>Linkpick, c'est aussi une histoire…</Typography>
             </Box>
@@ -130,3 +130,11 @@ export default function Apropos() {
   )
 }
 
+const styles = {
+  apropos: {
+      backgroundImage: "url(/longchamp.jpeg)",
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+  },
+
+};
