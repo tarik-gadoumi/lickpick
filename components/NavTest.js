@@ -37,143 +37,158 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar
-      position="static"
-      sx={{ p: 3 }}
-      style={{ textTransform: "none", background: "none" }}
-    >
-      <Container maxWidth="xl" sx={{ mr: 5 }}>
-        <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
-          >
-            <img
-              src="/Logo.png"
-              alt="linkpick"
-              sx={{ width: 80, height: 80 }}
-            />
-          </Typography>
-
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
+    <Container>
+      <AppBar
+        position="static"
+        sx={{ p: 3, boxShadow: 0 }}
+        style={{ textTransform: "none", background: "none" }}
+      >
+        <Container maxWidth="xl" sx={{ mr: 5 }}>
+          <Toolbar disableGutters>
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
             >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
-          >
-            <img src="/Logo.png" alt="linkpick" className="img" />
-          </Typography>
-
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{
-                  my: 2,
-                  color: "black",
-                  display: "block",
-                  textTransform: "none",
-                }}
-              >
-                {page}
-              </Button>
-            ))}
-            <Box sx={{ mt: 2 }}>
-              {" "}
-              <Dropdown />
-            </Box>
-          </Box>
-
-          <Box>
-            <Typography>
-              {" "}
-              <Link
-                href="#"
-                underline="none"
-                sx={{
-                  px: 1,
-                  pb: 0.5,
-                  color: "black",
-                  fontSize: 14,
-                }}
-              >
-                {"  Se connecter"}
-              </Link>
+              <img
+                src="/Logo.png"
+                alt="linkpick"
+                sx={{ width: 80, height: 80 }}
+              />
             </Typography>
-          </Box>
-          <Box>
-            <Typography>
-              {" "}
-              <Button
-                variant="contained"
+
+            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+              <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleOpenNavMenu}
+                color="inherit"
+              >
+                <MenuIcon />
+              </IconButton>
+              <Menu
+                id="menu-appbar"
+                anchorEl={anchorElNav}
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "left",
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "left",
+                }}
+                open={Boolean(anchorElNav)}
+                onClose={handleCloseNavMenu}
                 sx={{
-                  borderRadius: "20px",
-                  textTransform: "none",
-                  px: 5,
-                  pb: 0.5,
-                  color: "white",
-                  textDecoration: "none",
+                  display: { xs: "block", md: "none" },
                 }}
               >
+                {pages.map((page) => (
+                  <MenuItem key={page} onClick={handleCloseNavMenu}>
+                    <Typography
+                      textAlign="center"
+                      sx={{
+                        fontFamily: "Montserrat",
+                        color: "primary.dark",
+                      }}
+                    >
+                      {page}
+                    </Typography>
+                  </MenuItem>
+                ))}
+              </Menu>
+            </Box>
+
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
+            >
+              <img src="/Logo.png" alt="linkpick" className="img" />
+            </Typography>
+
+            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+              {pages.map((page) => (
+                <Button
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                  sx={{
+                    my: 2,
+                    color: "black",
+                    display: "block",
+                    textTransform: "none",
+                    fontFamily: "Montserrat",
+                    color: "primary.dark",
+                  }}
+                >
+                  {page}
+                </Button>
+              ))}
+              <Box sx={{ mt: 2 }}>
+                {" "}
+                <Dropdown />
+              </Box>
+            </Box>
+
+            <Box>
+              <Typography>
+                {" "}
                 <Link
                   href="#"
                   underline="none"
                   sx={{
-                    borderRadius: "20px",
                     px: 1,
+                    pb: 0.5,
+                    color: "black",
+                    fontSize: 14,
+                    fontFamily: "Montserrat",
+                    color: "primary.dark",
+                  }}
+                >
+                  {"  Se connecter"}
+                </Link>
+              </Typography>
+            </Box>
+            <Box>
+              <Typography>
+                {" "}
+                <Button
+                  variant="contained"
+                  sx={{
+                    borderRadius: "20px",
+                    textTransform: "none",
+                    px: 5,
                     pb: 0.5,
                     color: "white",
                     textDecoration: "none",
                   }}
                 >
-                  {"  Sinscrire"}
-                </Link>
-              </Button>
-            </Typography>
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
+                  <Link
+                    href="#"
+                    underline="none"
+                    sx={{
+                      borderRadius: "20px",
+                      px: 1,
+                      pb: 0.5,
+                      color: "white",
+                      textDecoration: "none",
+                      fontFamily: "Montserrat",
+                    }}
+                  >
+                    {"  Sinscrire"}
+                  </Link>
+                </Button>
+              </Typography>
+            </Box>
+          </Toolbar>
+        </Container>
+      </AppBar>
+    </Container>
   );
 };
 export default ResponsiveAppBar;
