@@ -5,13 +5,11 @@ import isEmail from "validator/lib/isEmail";
 export default function EmailField() {
 	const [email, setEmail] = useState("");
 	const [error, setError] = useState(false);
-	const [isValidEmail, setIsValidEmail] = useState(false);
 	const handleEmailChange = (event) => {
 		const val = event.target.value;
 
-		setIsValidEmail(isEmail(val));
+		val !== '' ? setError(!isEmail(val)) : setError(false);
 		setEmail(val);
-		setError(!isValidEmail);
 	};
 
 	return (

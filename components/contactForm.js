@@ -4,14 +4,13 @@ import EmailField from "./EmailField";
 import PhoneField from "./PhoneField";
 
 export default function ContactForm() {
-
-    const style = {
-        padding: 5,
-    };
+	const style = {
+		marginTop: 10,
+	};
 
 	return (
-		<form action="/api/contact" method="post">
-			<Grid sx={style} container spacing={2}>
+		<form action="/" method="post">
+			<Grid sx={style} container spacing={3}>
 				<Grid item xs={12} md={6}>
 					<TextField
 						fullWidth
