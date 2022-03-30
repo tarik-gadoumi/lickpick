@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="footer-detail">
             <div className="footer-detail-primary">
               {" "}
-              <img src="/Logo.png" alt="linkpick" className="img" />
+              <img src="/Logo.png" href='/index' alt="linkpick" className="img" />
               <br></br>
               <br></br>
               <div>
@@ -92,7 +92,7 @@ export default function Footer() {
                       color: "primary.dark",
                     }}
                   >
-                    <a href="">Trouver une entreprise</a>
+                    <a href="/solution-entreprise">Trouver une entreprise</a>
                   </Typography>
                 </div>
                 <br></br>
@@ -107,7 +107,7 @@ export default function Footer() {
                       color: "primary.dark",
                     }}
                   >
-                    <a href="">Trouver un établissement scolaire</a>
+                    <a href="/solution-ecole">Trouver un établissement scolaire</a>
                   </Typography>
                 </div>
               </div>
@@ -133,7 +133,7 @@ export default function Footer() {
                       color: "primary.dark",
                     }}
                   >
-                    <a href="">Solution entreprise</a>
+                    <a href="/solution-entreprise">Solution entreprise</a>
                   </Typography>
                 </div>
                 <br></br>
@@ -148,7 +148,7 @@ export default function Footer() {
                       color: "primary.dark",
                     }}
                   >
-                    <a href="">Solution établissement scolaire</a>
+                    <a href="/solution-ecole">Solution établissement scolaire</a>
                   </Typography>
                 </div>
               </div>
@@ -175,7 +175,7 @@ export default function Footer() {
                       color: "primary.dark",
                     }}
                   >
-                    <a href="">Contactez-nous</a>
+                    <a href="/contact">Contactez-nous</a>
                   </Typography>
                 </div>
               </div>
@@ -203,7 +203,7 @@ export default function Footer() {
                 >
                   <div className="title-element-right-linkpick">
                     <br></br>
-                    <a href="">Pourquoi Linkpick</a>
+                    <a href="/apropos">Pourquoi Linkpick</a>
                   </div>
                 </Typography>
 
@@ -220,7 +220,7 @@ export default function Footer() {
                   {" "}
                   <div className="title-element-left-history">
                     {" "}
-                    <a href="">Notre histoire</a>
+                    <a href="/apropos">Notre histoire</a>
                   </div>
                 </Typography>
 
@@ -236,7 +236,7 @@ export default function Footer() {
                 >
                   <div className="title-element-left">
                     {" "}
-                    <a href="">Nous embauchons !</a>
+                    <a href="https://www.linkedin.com/company/linkpick/posts/">Nous embauchons !</a>
                   </div>
                 </Typography>
               </div>
