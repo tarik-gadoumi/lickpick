@@ -112,7 +112,7 @@ export default function Foote() {
                           color: "primary.dark",
                         }}
                       >
-                        <a href="">Trouver une entreprise</a>
+                        <a href="/solution-entreprise">Trouver une entreprise</a>
                       </Typography>
                     </div>
                     <br></br>
@@ -127,7 +127,7 @@ export default function Foote() {
                           color: "primary.dark",
                         }}
                       >
-                        <a href="">Trouver un établissement scolaire</a>
+                        <a href="/solution-ecole">Trouver un établissement scolaire</a>
                       </Typography>
                     </div>
                   </div>
@@ -153,7 +153,7 @@ export default function Foote() {
                           color: "primary.dark",
                         }}
                       >
-                        <a href="">Solution entreprise</a>
+                        <a href="/solution-entreprise">Solution entreprise</a>
                       </Typography>
                     </div>
                     <br></br>
