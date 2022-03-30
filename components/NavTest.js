@@ -178,6 +178,7 @@ const ResponsiveAppBar = () => {
                     fontSize: 14,
                     fontFamily: "Montserrat",
                     color: "primary.dark",
+                    display: { xs: "none", md: "flex" },
                   }}
                 >
                   {"  Se connecter"}
