@@ -1,22 +1,23 @@
-import { Box } from "@mui/material";
-import { styled } from "@mui/material/styles";
-import NavBar from "./NavBar";
-import NavTest from "./NavTest";
-import Footer from "./Footer";
-import Foote from "./Foote";
-import { gsap } from "gsap/dist/gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { Box } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import NavBar from './NavBar';
+import NavTest from './NavTest';
+import Footer from './Footer';
+import Foote from './Foote';
+import { gsap } from 'gsap/dist/gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
-if (typeof window !== "undefined") {
+if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
 }
+
 
 const BodyContainer = styled("div")({
   display: "flex",
   flex: 1,
-  minHeight: "100vh",
-  flexDirection: "column",
-  justifyContent: "space-between",
+  minHeight: '100vh',
+  flexDirection: 'column',
+  justifyContent: 'space-between',
 });
 
 const Layout = ({ children }) => {
@@ -25,7 +26,6 @@ const Layout = ({ children }) => {
       {/* <Foote /> */}
       {/* <NavBar /> */}
       <NavTest />
-
       <Box sx={{ flexGrow: 1, minHeight: "60vh" }}>{children}</Box>
       <br></br>
       <br></br>
