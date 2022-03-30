@@ -60,7 +60,7 @@ export default function Home() {
     y: '0'
   });
   gsap.to(".partenaires", {
-    scrollTrigger: ".boxContainer5", 
+    scrollTrigger: ".partenaires", 
     y: '0'
   });
 }, []);
@@ -165,7 +165,7 @@ export default function Home() {
         <Box  className='dashboard' sx={{transform: 'translateY(+1000px)'}} ><img width="100%" src='/dashboard.png' ></img></Box>
         </Container>
       </Stack>
-      <Stack  className='boxContainer4' sx={{overflow: "hidden"}}>
+      <Stack  className='boxContainer4' sx={{overflow: "hidden"}} spacing={3}>
         <Typography align='center' variant='h5'>Construisez enfin votre carrière au rythme de votre parcours</Typography>
         <Box className="preinscription" sx={{transform: 'translateY(+500px)'}}><Preinscription/></Box>
       </Stack>
