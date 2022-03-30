@@ -23,8 +23,9 @@ const Layout = ({ children }) => {
       <br></br>
       <br></br>
 
-      <Footer />
+      {/* <Footer /> */}
       {/* <Foote /> */}
+      <Foote />
 
       <style jsx global>{`
         body {

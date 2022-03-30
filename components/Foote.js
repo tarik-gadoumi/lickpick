@@ -1,223 +1,467 @@
-import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
-import MenuItem from "@mui/material/MenuItem";
-import { spacing, Link } from "@mui/material/";
-import Dropdown from "./Dropdown";
+import React from "react";
+import { useState } from "react";
+import Grid from "@mui/material";
+import { Button, Typography, Item, Box } from "@mui/material/";
 
-const pages = ["Trouver mon entreprise", "Trouver mon école"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+// import { FiMenu, FiX } from "react-icons/fi";
 
-const ResponsiveAppBar = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+export default function Foote() {
+  const [open, setOpen] = useState(false);
 
   return (
-    <AppBar
-      position="static"
-      sx={{ p: 3, boxShadow: 0 }}
-      style={{ textTransform: "none", background: "none" }}
-    >
-      <Container>
-        <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
-          >
-            <img
-              src="/Logo.png"
-              alt="linkpick"
-              sx={{ width: 80, height: 80 }}
-            />
-          </Typography>
+    <div className="testa">
+      <Box
+        sx={{
+          display: "grid",
+          gridTemplateColumns: "repeat(4, 1fr)",
+          gap: 1,
+          gridTemplateRows: "auto",
+          gridTemplateAreas: `"header header header header"
+  "main main . sidebar"
+  "footer footer footer footer"`,
+        }}
+      >
+        <Box sx={{ gridArea: "footer" }}>
+          <div className="footer">
+            <div className="footer-detail-border">
+              <div className="footer-detail">
+                <div className="footer-detail-primary">
+                  {" "}
+                  <img src="/Logo.png" alt="linkpick" className="img" />
+                  <br></br>
+                  <br></br>
+                  <div>
+                    <Typography
+                      sx={{
+                        fontSize: "0.7rem",
+                        fontFamily: "Roboto",
 
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon sx={{ color: "black" }} />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                        color: "primary.dark",
+                      }}
+                    >
+                      <span className="primary-description-footer">
+                        Linkpick simplifie et automatise les processus de paie
+                        et de RH <br />
+                        pour les petites et moyennes entreprises. Notre mission
+                        est de <br />
+                        soutenir la transformation numérique de la gestion des{" "}
+                        <br />
+                        ressources humaines grâce à une gamme croissante de{" "}
+                        <br />
+                        caractéristiques et de services. <br />
+                      </span>
+                    </Typography>
+                  </div>
+                  <br></br>
+                  <br></br>
+                  <div className="footer-social">
+                    <img src="/Linkedin.png" alt="linkpick" className="" />
+                    <img src="/Facebook.png" alt="linkpick" className="" />
+                    <img src="/Instagram.png" alt="linkpick" className="" />
+                  </div>
+                  <br></br>
+                  <div className="footer-upload">
+                    <br></br>
+                    <Typography
+                      sx={{
+                        fontSize: "0.7rem",
+                        fontFamily: "Roboto",
+
+                        color: "primary.dark",
+                      }}
+                    >
+                      <span className="primary-description-footer">
+                        Bientôt disponible sur
+                      </span>
+                    </Typography>
+                    <br></br>
+                    <div className="footer-upload-primary">
+                      <img
+                        src="/apple.png"
+                        alt="linkpick"
+                        className="img-social"
+                      />
+                      <img
+                        src="/google.png"
+                        alt="linkpick"
+                        className="img-social"
+                      />
+                    </div>
+                  </div>
+                  <br></br>
+                </div>
+                <div className="footer-detail-element">
+                  <div className="footer-upload-element">
+                    <Typography
+                      sx={{
+                        fontFamily: "Montserrat",
+                        color: "primary.dark",
+                        fontSize: "0.7rem",
+                      }}
+                    >
+                      <span className="title-element">Recherche</span>
+                    </Typography>
+                    <br></br>
+
+                    <div className="title-element-right">
+                      <br></br>{" "}
+                      <Typography
+                        sx={{
+                          fontSize: "0.7rem",
+                          fontFamily: "Roboto",
+
+                          color: "primary.dark",
+                        }}
+                      >
+                        <a href="">Trouver une entreprise</a>
+                      </Typography>
+                    </div>
+                    <br></br>
+
+                    <div className="title-element-left">
+                      {" "}
+                      <Typography
+                        sx={{
+                          fontSize: "0.7rem",
+                          fontFamily: "Roboto",
+
+                          color: "primary.dark",
+                        }}
+                      >
+                        <a href="">Trouver un établissement scolaire</a>
+                      </Typography>
+                    </div>
+                  </div>
+
+                  <div className="footer-upload-element">
+                    <Typography
+                      sx={{
+                        fontFamily: "Montserrat",
+                        color: "primary.dark",
+                      }}
+                    >
+                      <span className="title-element">Espace Organisme</span>
+                    </Typography>
+                    <br></br>
+
+                    <div className="title-element-right">
+                      <br></br>
+                      <Typography
+                        sx={{
+                          fontSize: "0.7rem",
+                          fontFamily: "Roboto",
+
+                          color: "primary.dark",
+                        }}
+                      >
+                        <a href="">Solution entreprise</a>
+                      </Typography>
+                    </div>
+                    <br></br>
+
+                    <div className="title-element-left">
+                      {" "}
+                      <Typography
+                        sx={{
+                          fontSize: "0.7rem",
+                          fontFamily: "Roboto",
+
+                          color: "primary.dark",
+                        }}
+                      >
+                        <a href="">Solution établissement scolaire</a>
+                      </Typography>
+                    </div>
+                  </div>
+
+                  <div className="footer-upload-element">
+                    <Typography
+                      sx={{
+                        fontFamily: "Montserrat",
+                        color: "primary.dark",
+                      }}
+                    >
+                      {" "}
+                      <span className="title-element">Contact</span>
+                    </Typography>
+                    <br></br>
+
+                    <div className="title-element-right">
+                      <br></br>
+                      <Typography
+                        sx={{
+                          fontSize: "0.7rem",
+                          fontFamily: "Roboto",
+
+                          color: "primary.dark",
+                        }}
+                      >
+                        <a href="">Contactez-nous</a>
+                      </Typography>
+                    </div>
+                  </div>
+
+                  <div className="footer-upload-element">
+                    <Typography
+                      sx={{
+                        fontFamily: "Montserrat",
+                        color: "primary.dark",
+                      }}
+                    >
+                      {" "}
+                      <span className="title-element">Societé</span>
+                    </Typography>
+
+                    <br></br>
+
+                    <Typography
+                      sx={{
+                        fontSize: "0.7rem",
+                        fontFamily: "Roboto",
+
+                        color: "primary.dark",
+                      }}
+                    >
+                      <div className="title-element-right-linkpick">
+                        <br></br>
+                        <a href="">Pourquoi Linkpick</a>
+                      </div>
+                    </Typography>
+
+                    <br></br>
+
+                    <Typography
+                      sx={{
+                        fontSize: "0.7rem",
+                        fontFamily: "Roboto",
+
+                        color: "primary.dark",
+                      }}
+                    >
+                      {" "}
+                      <div className="title-element-left-history">
+                        {" "}
+                        <a href="">Notre histoire</a>
+                      </div>
+                    </Typography>
+
+                    <br></br>
+
+                    <Typography
+                      sx={{
+                        fontSize: "0.7rem",
+                        fontFamily: "Roboto",
+
+                        color: "primary.dark",
+                      }}
+                    >
+                      <div className="title-element-left">
+                        {" "}
+                        <a href="">Nous embauchons !</a>
+                      </div>
+                    </Typography>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br></br>
+            <br></br>
+            <br></br>
+
+            <div className="condition-generale">
+              <Typography
+                sx={{
+                  fontSize: "0.7rem",
+                  fontFamily: "Roboto",
+
+                  color: "primary.dark",
+                }}
+              >
+                {" "}
+                <div className="primary-description-footer right-condition">
+                  Copyright © 2021 Linkpick, tous droits réservés.
+                </div>
+              </Typography>
+
+              <div className="condition-generale-right">
+                <div className="condition-generale-element">
                   <Typography
-                    textAlign="center"
                     sx={{
-                      fontFamily: "Montserrat",
+                      fontSize: "0.7rem",
+                      fontFamily: "Roboto",
+
                       color: "primary.dark",
                     }}
                   >
-                    {page}
-                  </Typography>{" "}
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
-          >
-            <img
-              src="/Logo.png"
-              alt="linkpick"
-              sx={{ width: 80, height: 80 }}
-            />
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{
-                  my: 2,
-                  color: "black",
-                  display: "block",
-                  textTransform: "none",
-                  fontFamily: "Montserrat",
-                  color: "primary.dark",
-                }}
-              >
-                {page}
-              </Button>
-            ))}
-            <Box sx={{ mt: 2 }}>
-              {" "}
-              <Dropdown />
-            </Box>
-          </Box>
+                    {" "}
+                    <div>Conditions générales d'utilisations</div>
+                  </Typography>
+                  <Typography
+                    sx={{
+                      fontSize: "0.7rem",
+                      fontFamily: "Roboto",
 
-          <Box sx={{ flexGrow: 0 }}>
-            {/* <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip> */}
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-          <Box className="displayButton">
-            <Typography>
-              {" "}
-              <Link
-                href="#"
-                underline="none"
-                sx={{
-                  px: 1,
-                  pb: 0.5,
-                  color: "black",
-                  fontSize: 14,
-                  fontFamily: "Montserrat",
-                  color: "primary.dark",
+                      color: "primary.dark",
+                    }}
+                  >
+                    {" "}
+                    <div>Cookies</div>
+                  </Typography>
+                  <Typography
+                    sx={{
+                      fontSize: "0.7rem",
+                      fontFamily: "Roboto",
+
+                      color: "primary.dark",
+                    }}
+                  >
+                    {" "}
+                    <div>Mentions légales</div>
+                  </Typography>
+                  <Typography
+                    sx={{
+                      fontSize: "0.7rem",
+                      fontFamily: "Roboto",
+
+                      color: "primary.dark",
+                    }}
+                  >
+                    {" "}
+                    <div>RGPD</div>
+                  </Typography>
+
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Box>
+      </Box>
+      {/* <div onClick={() => setOpen(!open)} className="nav-icon">
+        {open ? <FiX /> : <FiMenu />}
+      </div> */}
+
+      <style jsx>{`
+
+       
+          @media only screen and (max-width: 1000px) {
+            .footer{
+                text-align: center;
+    
+            }
+            a {
+                color: inherit;
+                text-decoration: none;
+              }
+          }
+
+         @media only screen and (min-width: 1000px) {
+            .primary-description-footer{
+                color: #4e71ba;
+              }
+            
+                .footer-social {
+                  display: flex;
+                  flex-direction: row;
+                  column-gap: 0.8rem;
+                }
+                .footer-detail-element {
+                  display: flex;
+                  flex-direction: row;
+                  column-gap: 2rem;
+                }
+                .img {
+                  height: 38px;
+                  width: 165px;
+                }
+        
+                .img-social {
+                  height: 40px;
+                  width: 130px;
+                }
+                .footer-upload a {
+                  text-align: right;
+                }
+                .footer-detail-primary {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-around;
+                }
+                .footer-detail {
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                  margin-top: 2.5rem;
+                }
+                .footer-detail-border {
+                  border-top: 0.7px solid #e0e0e0;
+                  border-bottom: 0.7px solid #e0e0e0;
+                  height: 350px;
+                  margin-left: 14rem;
+                  margin-right: 14rem;
+                }
+                .footer-upload-element {
+                  margin-top: 0.9rem;
+                }
+                .title-element-right a {
+                  margin-right: 4rem;
+                }
+                .title-element-left a {
+                  margin-left: -0.4rem;
+                }
+                .title-element-right-linkpick a {
+                  margin-right: 1rem;
+                }
+                .title-element-left-history a {
+                  margin-left: -2rem;
+                }
+                .title-element {
+                  font-size: 1rem;
+                  font-weight: bold;
+                }
+                .footer {
+                  width: 100%;
+                  height: 100px;
+        
+                  font-size: 0.7rem;
+                }
+        
+                .footer a {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                }
+        
+                a {
+                  color: inherit;
+                  text-decoration: none;
+                }
+                .footer-upload {
+                  display: flex;
+                  flex-direction: column;
+                }
+                .footer-upload-primary {
+                  display: flex;
+                  flex-direction: row;
+                  column-gap: 0.7rem;, 
+                                
+                }
+                .condition-generale {
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                  margin-left: 14rem;
+                  margin-right: 12rem;
+                }
+                .condition-generale-element {
+                  display: flex;
+                  flex-direction: row;
+                  column-gap: 2rem;
                 }}
-              >
-                {"  Se connecter"}
-              </Link>
-            </Typography>
-          </Box>
-          <Box>
-            <Typography>
-              {" "}
-              <Button
-                variant="contained"
-                sx={{
-                  borderRadius: "20px",
-                  textTransform: "none",
-                  px: 5,
-                  pb: 0.5,
-                  color: "white",
-                  textDecoration: "none",
-                }}
-              >
-                <Link
-                  href="#"
-                  underline="none"
-                  sx={{
-                    borderRadius: "20px",
-                    px: 1,
-                    pb: 0.5,
-                    color: "white",
-                    textDecoration: "none",
-                    fontFamily: "Montserrat",
-                  }}
-                >
-                  {"  Sinscrire"}
-                </Link>
-              </Button>
-            </Typography>
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
+      `}</style>
+    </div>
   );
-};
-export default ResponsiveAppBar;
+}
