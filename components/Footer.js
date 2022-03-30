@@ -257,7 +257,7 @@ export default function Footer() {
             }}
           >
             {" "}
-            <div className="primary-description-footer">
+            <div className="primary-description-footer right-condition">
               Copyright © 2021 Linkpick, tous droits réservés.
             </div>
           </Typography>
@@ -322,6 +322,7 @@ export default function Footer() {
       .primary-description-footer{
         color: #4e71ba;
       }
+    
         .footer-social {
           display: flex;
           flex-direction: row;
@@ -359,8 +360,8 @@ export default function Footer() {
           border-top: 0.7px solid #e0e0e0;
           border-bottom: 0.7px solid #e0e0e0;
           height: 350px;
-          margin-left: 10rem;
-          margin-right: 10rem;
+          margin-left: 14rem;
+          margin-right: 14rem;
         }
         .footer-upload-element {
           margin-top: 0.9rem;
@@ -412,8 +413,8 @@ export default function Footer() {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
-          margin-left: 10rem;
-          margin-right: 10rem;
+          margin-left: 14rem;
+          margin-right: 12rem;
         }
         .condition-generale-element {
           display: flex;
