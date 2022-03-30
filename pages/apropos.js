@@ -8,8 +8,12 @@ export default function Apropos() {
   return (
     <Box>
         <Box sx={styles.apropos} >
+          <Box sx={styles.aproposboite} >
             <Typography sx={{mb: 6}} color='#ffffff' align='center' variant='h1'>LINKPICK</Typography>
             <Typography color='#ffffff' align='center' variant='h4'>LA SOLUTION QUI FACILITE LA RELATION ENTRE ÉTUDIANTS, ENTREPRISES ET ÉCOLES</Typography>
+
+          </Box>
+         
         </Box>
       
     
@@ -146,7 +150,19 @@ const styles = {
     backgroundColor: 'primary.main',
     paddingTop: 12,
     paddingBottom: 18,
-   
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  aproposboite: {
+    backgroundColor:'black',
+    height: '60%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingTop: 4,
+    paddingBottom: 4,
   },
 
 };
