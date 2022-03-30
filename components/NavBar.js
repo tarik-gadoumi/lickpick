@@ -14,13 +14,13 @@ export default function NavBar() {
         <div>
           <div className="nav-display">
             <div className="logo-primary-display">
-              <img src="/Logo.png" alt="linkpick" className="img" />
+              <img href='/home' src="/Logo.png" alt="linkpick" className="img" />
               <Typography>
-                <a href="/about">Trouver mon entreprise</a>{" "}
+                <a href="/solution-entreprise">Trouver mon entreprise</a>{" "}
               </Typography>
               <Typography>
                 {" "}
-                <a href="/about">Trouver mon école</a>
+                <a href="/solution-ecole">Trouver mon école</a>
               </Typography>
 
               <Dropdown />

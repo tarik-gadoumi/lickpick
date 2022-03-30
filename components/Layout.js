@@ -23,6 +23,7 @@ const BodyContainer = styled("div")({
 const Layout = ({ children }) => {
   return (
     <BodyContainer>
+      {/* <Foote /> */}
       {/* <NavBar /> */}
       {/* <NavTest /> */}
   
@@ -30,8 +31,9 @@ const Layout = ({ children }) => {
       <br></br>
       <br></br>
 
-      <Footer />
+      {/* <Footer /> */}
       {/* <Foote /> */}
+      <Foote />
 
       <style jsx global>{`
         body {

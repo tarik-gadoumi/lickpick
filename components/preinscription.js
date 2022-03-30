@@ -5,12 +5,8 @@ import {Button, Card, CardActions, CardContent, CardMedia, Grid, Typography, Lin
 export default function Preinscription() {
   return (
     <Container  sx={{mb: 4}} >
-      <Stack >
-           <Typography align='center' variant='h3'>Préinscrivez vous sans plus tarder</Typography>
-      </Stack>
- 
-     <Stack direction={{xs:"column", md:"row",}} spacing={2}>
-        <Card sx={{ maxHeight: '100%', display: 'flex', flexDirection: 'column' }}>
+     <Stack direction={{xs:"column", md:"row"}} spacing={2}>
+        <Card sx={{ maxHeight: '100%', display: 'flex', flexDirection: 'column', borderRadius: '20px', boxShadow: '0 3px 13px #D4E4FF', border: 0 }}>
             <CardMedia sx={{ maxHeight: '100%'}} component="img" src="/ecole.png" alt="ecole"/>
               <CardContent sx={{ flexGrow: 1 }} justifyContent="center" alignItems="center">
                 <Typography align="center" gutterBottom variant="h5" component="h5">
@@ -21,12 +17,12 @@ export default function Preinscription() {
                 </Typography>
               </CardContent>
               <CardActions sx={{display: 'flex', justifyContent: 'center'}}>
-                <Button variant="contained" size="small" sx={{backgroundColor:"warning.dark", borderRadius: "400px", p: 1.5, width:'60%'}} >Découvrir la solution</Button>
+                  <Button href='/solution-ecole' variant="contained" size="small" sx={{backgroundColor:"warning.dark", borderRadius: "400px", p: 1.5, width:'60%'}} >Découvrir la solution</Button>
               </CardActions>
             </Card>
 
    
-            <Card sx={{ maxHeight: '100%', display: 'flex', flexDirection: 'column' }}>
+            <Card sx={{ maxHeight: '100%', display: 'flex', flexDirection: 'column', borderRadius: '20px', boxShadow: '0 3px 13px #D4E4FF', border: 0 }}>
               <CardMedia  sx={{ maxHeight: '100%', mb: 5}} component="img" src="/etudiant.png" alt="etudiant"/>
               <CardContent sx={{ flexGrow: 1 }}>
                 <Typography align="center" gutterBottom variant="h5" component="h5">
@@ -37,11 +33,11 @@ export default function Preinscription() {
                 </Typography>
               </CardContent>
               <CardActions sx={{display: 'flex', justifyContent: 'center'}} >
-                <Button variant="contained" size="small" sx={{borderRadius: "400px", p: 1.5, width:'70%'}}>S'inscrire</Button>
+                   <Button variant="contained" size="small" sx={{borderRadius: "400px", p: 1.5, width:'70%'}}>S'inscrire</Button>
               </CardActions>
             </Card>
 
-            <Card sx={{ maxHeight: '100%', display: 'flex', flexDirection: 'column' }} >
+            <Card sx={{ maxHeight: '100%', display: 'flex', flexDirection: 'column', borderRadius: '20px', boxShadow: '0 3px 13px #D4E4FF', border: 0 }} >
                <CardMedia  sx={{ maxHeight: '100%', mb: 2}} component="img" src="/recruteur.png" alt="recruteur"/>
               <CardContent sx={{ flexGrow: 1 }}>
                 <Typography align="center" gutterBottom variant="h5" component="h5">
@@ -52,7 +48,7 @@ export default function Preinscription() {
                 </Typography>
               </CardContent>
               <CardActions sx={{display: 'flex', justifyContent: 'center'}} >
-                <Button color="secondary" variant="contained" size="small" sx={{borderRadius: "400px", p: 1.5, width:'60%'}}>Découvrir la solution</Button>
+                  <Button href='/solution-entreprise' color="secondary" variant="contained" size="small" sx={{borderRadius: "400px", p: 1.5, width:'60%'}}>Découvrir la solution</Button>
               </CardActions>
             </Card>
     </Stack>
