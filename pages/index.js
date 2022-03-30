@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Button, Box, Stack, Container, TextField, Typography, Select, MenuItem } from '@mui/material/';
 import TextSnippetIcon from '@mui/icons-material/TextSnippet';
 import Newsletter from '../components/Newsletter';
@@ -9,12 +9,61 @@ import IndexCardHorizon from '../components/index/CardHorizon'
 import Preinscription from '../components/Preinscription'
 import Partenaires from '../components/Partenaires'
 
+
 export default function Home() {
+
   const [valueType, setValueType] = useState("alternance");
   const [valuePlace, setValuePlace] = useState("company");
 
   const handleChangeType = (event) => setValueType(event.target.value);
   const handleChangePlace = (event) => setValuePlace(event.target.value);
+  useEffect(() => {
+  gsap.to(".box1", {
+    scrollTrigger: ".boxContainer", scrub: true,
+    x: '0'
+  });
+  gsap.to(".box2", {
+    scrollTrigger: ".boxContainer", 
+    y: '0'
+  });
+  gsap.to(".box3", {
+    scrollTrigger: ".boxContainer", 
+    x: '0'
+  });
+  gsap.to(".typo", {
+    scrollTrigger: ".boxContainer2", 
+
+    y: '0'
+  });
+  gsap.to(".horizon", {
+    scrollTrigger: ".boxContainer2", 
+
+    y: '0'
+  });
+  gsap.to(".boxContainer2", {
+    scrollTrigger: ".bonhomme", 
+
+    x: '0'
+  });
+  gsap.to(".bonhomme", {
+    scrollTrigger: ".bonhomme", 
+    delay: 0.5,
+    x: '-80'
+  });
+  gsap.to(".dashboard", {
+    scrollTrigger: ".boxContainer3", 
+
+    y: '0'
+  });
+  gsap.to(".preinscription", {
+    scrollTrigger: ".boxContainer4", 
+    y: '0'
+  });
+  gsap.to(".partenaires", {
+    scrollTrigger: ".boxContainer5", 
+    y: '0'
+  });
+}, []);
 
   return (
     <>
@@ -69,25 +118,28 @@ export default function Home() {
           </Stack>
         </Container>
 
-        <Container>
-          <Stack spacing={5} direction={{ xs: 'column', md: 'row' }}>
-            <IndexCard icon='explore' title='Choisissez votre voie' description='Explorez les trajectoires de formation
+        <Container sx={{overflow: "hidden", p: 3}}>
+          <Stack  spacing={5} direction={{ xs: 'column', md: 'row' }}>
+            <Box className='box1' sx={{transform: 'translateX(-500px)'}}>
+            <IndexCard className='box1' icon='explore' title='Choisissez votre voie' description='Explorez les trajectoires de formation
             et candidatez en quelques clics dans 
             les écoles qui vous correspondent.' />
+            </Box>
+            <Box className='box2' sx={{transform: 'translateY(+500px)'}} >
             <IndexCard icon='work' title='Trouvez votre emploi' description="Validez vos diplômes avec nos 
               entreprises partenaires qui proposent des 
-              stages ou des alternances toute l'année." />
-            <IndexCard icon='insights' title='Soyez accompagné' description="Linkpick est ses partenaires s'engagent 
+              stages ou des alternances toute l'année." /></Box>
+              <Box className='box3' sx={{transform: 'translateX(+500px)'}} >
+            <IndexCard  icon='insights' title='Soyez accompagné' description="Linkpick est ses partenaires s'engagent 
               à vous accompagner et à vous épauler
-              tout au long de votre parcours d'étudiant." />
+              tout au long de votre parcours d'étudiant." /></Box>
           </Stack>
         </Container>
       </Box>
-      <Stack spacing={5} direction={{ xs: 'column', md: 'row' }} sx={styles.boxContainer}>
-
+      <Stack className='boxContainer' spacing={5} direction={{ xs: 'column', md: 'row' }} sx={styles.boxContainer}>
         <Stack spacing={3} width={{ xs: '90%', md: '40%' }} ml={5}>
-          <Container>
-            <Typography variant='h4' mb={3}>En quelques clics ...</Typography>
+          <Container className='boxContainer2' sx={{transform: 'translateX(-1000px)'}}>
+            <Typography className='typo' sx={{transform: 'translateY(-1000px)'}} variant='h4' mb={3}>En quelques clics ...</Typography>
             <Stack spacing={3}>
               <IndexCardHorizon icon='person' title='Plus de CV,' subtitle='partagez votre profil' description="Validez vos diplômes avec nos entreprises
             partenaires qui proposent des stages ou des
@@ -101,24 +153,24 @@ export default function Home() {
             </Stack>
           </Container>
         </Stack>
-        <Stack width='60%' sx={styles.boxIllustration} />
+        <Stack width='60%' sx={styles.boxIllustration} className='boxContainer2'><Box className='bonhomme' sx={{transform: 'translateX(1000px)'}} ><img height= 'auto' width= '50%' src="/bonhomme.png"></img></Box></Stack>
       </Stack>
-      <Stack align='center' sx={[styles.boxContainer, styles.printsContainer]}>
-        <Container>
+      <Stack  align='center' sx={[styles.boxContainer, styles.printsContainer]}>
+        <Container className='boxContainer3' >
         <Stack sx={{maxWidth: { xs: '90%', md: '60%' }}}>
           <Typography align='center' variant='h5'>Concentrez-vous sur l'essentiel avec Linkpick</Typography>
           <Typography align='center'>La solution Linkpick est conçue pour piloter facilement et au même endroit sa vie étudiante.
             Gagnez du temps pour les échanges qui comptent vraiment.</Typography>
         </Stack>
-        <img src='/dashboard.png' width='80%' ></img>
+        <Box  className='dashboard' sx={{transform: 'translateY(+1000px)'}} ><img width="100%" src='/dashboard.png' ></img></Box>
         </Container>
       </Stack>
-      <Stack>
+      <Stack  className='boxContainer4' sx={{overflow: "hidden"}}>
         <Typography align='center' variant='h5'>Construisez enfin votre carrière au rythme de votre parcours</Typography>
-        <Preinscription/>
+        <Box className="preinscription" sx={{transform: 'translateY(+500px)'}}><Preinscription/></Box>
       </Stack>
-      <Stack>
-        <Partenaires/>
+      <Stack className='boxContainer5' sx={{overflow: "hidden"}}>
+        <Box className="partenaires" sx={{transform: 'translateY(+500px)'}}><Partenaires/></Box>
       </Stack>
       <Stack>
         <Newsletter/>
@@ -126,6 +178,10 @@ export default function Home() {
     </>
 
   )
+
+  
+ 
+
 }
 
 
@@ -139,7 +195,7 @@ const styles = {
     right: 0,
     bottom: '30%',
     background: "no-repeat url('/home.png')",
-    backgroundPosition: 'center',
+    backgroundPosition: 'bottom',
     backgroundSize: "cover",
     zIndex: -1
   },
@@ -166,6 +222,7 @@ const styles = {
     pb: 10,
     minHeight: "100vh",
     display: 'flex',
+    overflow: "hidden"
   },
   printsContainer: {
     background: "no-repeat url('/prints.png')",
@@ -174,8 +231,14 @@ const styles = {
   },
   boxIllustration: {
     flex: 1,
+    overflow: "hidden",
     background: "no-repeat url('/sun-illustration.png')",
     backgroundPosition: 'right',
     backgroundSize: "contain",
+    transform: 'translateX(500px)',
+    display: {md: "flex", xs: "none"},
+    alignItems: 'end',
+    justifyContent: "center",
+
   }
 };
