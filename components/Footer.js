@@ -421,6 +421,25 @@ export default function Footer() {
           flex-direction: row;
           column-gap: 2rem;
         }
+
+        
+        @media screen and (min-width: 420px) and (max-width: 1023px) {
+          .footer-detail {
+            display: flex;
+            flex-direction: column;
+            column-gap: 2rem;
+          }
+          .footer-detail-border {
+            border-top:none;
+            border-bottom: none;
+            height:0px;
+            margin-left: none;
+            margin-right: none;
+          }
+          .condition-generale {
+            display: none;
+          }
+        }
       `}</style>
 
       <style jsx global>{`

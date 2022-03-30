@@ -16,6 +16,7 @@ const BodyContainer = styled("div")({
 const Layout = ({ children }) => {
   return (
     <BodyContainer>
+      {/* <Foote /> */}
       {/* <NavBar /> */}
       <NavTest />
       <Box sx={{ flexGrow: 1, minHeight: "60vh" }}>{children}</Box>
