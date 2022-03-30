@@ -19,6 +19,29 @@ const theme = createTheme({
 	},
     typography: {
         fontFamily: ['Roboto', 'Montserrat'].join(','),
+		h1:{
+			fontSize: 60,
+			fontWeight: "bold",
+		},
+
+		h2:{
+			fontSize: 40,
+			fontWeight: "bold",
+		},
+
+		h3:{
+			fontSize: 30,
+			fontWeight: "bold",
+		},
+
+		h4:{
+			fontSize: 25,
+		},
+
+		h5:{
+			fontSize: 20,
+		},
+
     }
 });
 

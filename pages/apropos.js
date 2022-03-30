@@ -8,14 +8,14 @@ export default function Apropos() {
   return (
     <Box>
         <Box sx={styles.apropos} >
-            <Typography  color='#ffffff' align='center' variant='h1'>LINKPICK</Typography>
-            <Typography color='#ffffff' align='center' variant='h2'>LA SOLUTION QUI FACILITE LA RELATION ENTRE ÉTUDIANTS, ENTREPRISES ET ÉCOLES</Typography>
+            <Typography sx={{mb: 4}} color='#ffffff' align='center' variant='h1'>LINKPICK</Typography>
+            <Typography color='#ffffff' align='center' variant='h4'>LA SOLUTION QUI FACILITE LA RELATION ENTRE ÉTUDIANTS, ENTREPRISES ET ÉCOLES</Typography>
         </Box>
       
     
           <Container  sx={{mb: 16, mt: 8}} >
             <Box sx={{mb: 4}}>
-              <Typography align='center' variant='h3'>Linkpick, c'est aussi une histoire…</Typography>
+              <Typography align='center' variant='h2'>Linkpick, c'est aussi une histoire…</Typography>
             </Box>
             
             <Typography color='#5971b0' align='center'>Il y a peu de temps encore, nous aussi nous étions étudiants. Nous avons connu les longues sessions de recherche d’informations sur internet, les dizaines de CV personnalisés envoyés et restés sans réponse, les tonnes de documents administratifs à échanger avec l’école, etc...</Typography>
@@ -144,6 +144,8 @@ const styles = {
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     backgroundColor: 'primary.main',
+    paddingTop: 12,
+    paddingBottom: 12,
   },
 
 };
