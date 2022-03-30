@@ -6,6 +6,7 @@ import {Button, Card, CardActions, CardContent, CardMedia, Grid, Typography, Lin
 export default function Partenaires() {
   return (
     <Container className='partenaires'  sx={{mb: 4, mt: 6}} >
+         <Typography align='center' variant='h5'>Nos partenaires institutionnels</Typography>
         <Stack direction="row" spacing={2} justifyContent="space-between" alignItems="center" >
         <Card sx={{ height: '100px', width: '100px', display: 'flex', flexDirection: 'column', boxShadow: 0 }}>
             <CardMedia component="img" src="/french-tech.png" alt="frenchtech"/>
