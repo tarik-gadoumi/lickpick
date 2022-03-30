@@ -41,14 +41,14 @@ export default function Foote() {
                     >
                       <span className="primary-description-footer">
                         Linkpick simplifie et automatise les processus de paie
-                        et de RH <br />
-                        pour les petites et moyennes entreprises. Notre mission
-                        est de <br />
-                        soutenir la transformation numérique de la gestion des{" "}
-                        <br />
-                        ressources humaines grâce à une gamme croissante de{" "}
-                        <br />
-                        caractéristiques et de services. <br />
+                        <br></br>
+                        et de RH pour les petites et moyennes entreprises. Notre
+                        <br></br>
+                        mission est de soutenir la transformation numérique de
+                        <br></br>
+                        la gestion des ressources humaines grâce à une gamme
+                        <br></br>
+                        croissante de caractéristiques et de services.<br></br>
                       </span>
                     </Typography>
                   </div>
@@ -70,7 +70,7 @@ export default function Foote() {
                         color: "primary.dark",
                       }}
                     >
-                      <span className="primary-description-footer">
+                      <span className="primary-description-color">
                         Bientôt disponible sur
                       </span>
                     </Typography>
@@ -96,7 +96,6 @@ export default function Foote() {
                       sx={{
                         fontFamily: "Montserrat",
                         color: "primary.dark",
-                        fontSize: "0.7rem",
                       }}
                     >
                       <span className="title-element">Recherche</span>
@@ -211,9 +210,7 @@ export default function Foote() {
                       {" "}
                       <span className="title-element">Societé</span>
                     </Typography>
-
                     <br></br>
-
                     <Typography
                       sx={{
                         fontSize: "0.7rem",
@@ -227,26 +224,20 @@ export default function Foote() {
                         <a href="">Pourquoi Linkpick</a>
                       </div>
                     </Typography>
-
-                    <br></br>
-
-                    <Typography
-                      sx={{
-                        fontSize: "0.7rem",
-                        fontFamily: "Roboto",
-
-                        color: "primary.dark",
-                      }}
-                    >
+                    <br></br>{" "}
+                    <div className="title-element-left-history">
                       {" "}
-                      <div className="title-element-left-history">
-                        {" "}
+                      <Typography
+                        sx={{
+                          fontSize: "0.7rem",
+                          fontFamily: "Roboto",
+                          color: "primary.dark",
+                        }}
+                      >
                         <a href="">Notre histoire</a>
-                      </div>
-                    </Typography>
-
+                      </Typography>
+                    </div>
                     <br></br>
-
                     <Typography
                       sx={{
                         fontSize: "0.7rem",
@@ -278,7 +269,7 @@ export default function Foote() {
                 }}
               >
                 {" "}
-                <div className="primary-description-footer right-condition">
+                <div className="primary-description-color right-condition">
                   Copyright © 2021 Linkpick, tous droits réservés.
                 </div>
               </Typography>
@@ -356,13 +347,51 @@ export default function Foote() {
                 color: inherit;
                 text-decoration: none;
               }
+              br{
+                  display:none;
+              }
+              .footer-detail-element{
+                  display:flex;
+                  flex-direction: column;
+                  justify-content:space-between
+
+              }
+              .title-element {
+                font-size: 0.8rem;
+                font-weight: bold;
+              }
+              .primary-description-footer{
+                  display:flex;
+                  flex-direction:column;
+                  width:70%;
+                  text-align:justify;
+                  margin-left:5rem;
+              }
+              .primary-description-footer{
+                color: #4e71ba;
+              }
+              primary-description-color{
+                text-align:center;
+                color: #4e71ba;
+
+              }
+              .footer-social{
+                  display:flex;
+                  flex-direction:row;
+                  column-gap: 1rem;
+                  align-items:center;
+                  justify-content:center;
+              }
           }
 
          @media only screen and (min-width: 1000px) {
             .primary-description-footer{
                 color: #4e71ba;
               }
-            
+              primary-description-color{
+                color: #4e71ba;
+
+              }
                 .footer-social {
                   display: flex;
                   flex-direction: row;
